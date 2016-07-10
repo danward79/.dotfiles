@@ -1,6 +1,6 @@
 #.bashrc file
 
-export DOTFILEPATH=~/.dotfiles
+export DOTFILEPATH="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 # source private bash files if they exist
 if [ -f $DOTFILEPATH/private/.private ]; then . $DOTFILEPATH/private/.private; fi
@@ -14,4 +14,4 @@ export GOPATH=$HOME/go
 export GOROOT=/usr/local/opt/go/libexec
 export PATH=$PATH:$GOPATH/bin:$GOROOT/bin
 
-echo ".bashrc complete"
+echo ".bashrc complete.."

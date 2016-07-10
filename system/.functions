@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 #.functions handy gems
 
 # Simple calculator
@@ -150,4 +151,4 @@ function targz() {
 	echo "${tmpFile}.gz ($((zippedSize / 1000)) kB) created successfully.";
 }
 
-echo ".functions complete"
+echo ".functions complete..."
