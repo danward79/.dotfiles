@@ -1,0 +1,12 @@
+#.export is a central list of all exports
+
+#GOLANG Paths
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOPATH/bin
+#export GOROOT=/usr/local/opt/go/libexec
+export PATH=$PATH:$GOROOT/bin
+
+#POSTGRES.app
+export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin
+ 
+echo ".exports complete.."
