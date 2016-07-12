@@ -10,8 +10,4 @@ do
   [ -f "$DOTFILE" ] && source "$DOTFILE"
 done
 
-export GOPATH=$HOME/go
-export GOROOT=/usr/local/opt/go/libexec
-export PATH=$PATH:$GOPATH/bin:$GOROOT/bin
-
 echo ".bashrc complete.."
