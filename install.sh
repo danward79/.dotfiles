@@ -38,4 +38,24 @@ fi
 echo "Symlink to new files"
 ln -sfv "$DOTFILEPATH/.bash_profile" ~
 
+# Check for Homebrew and install if not found
+if test ! $(which brew); then
+  echo "brew not found - Installing ..."
+  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+fi
+
+# Install brew bundle & packages including dropbox etc
+if test ! $(brew tap | grep "homebrew/bundle"); then
+  echo "homebrew/bundle not found - installing ..."
+  brew tap homebrew/bundle
+  brew bundle
+fi
+
+# restore app settings. Needs dropbox installed.
+if test ! $(brew list | grep "mackup"); then
+  echo "mackup not found - installing ..."
+  brew install mackup
+  mackup restore
+fi
+
 echo "Install complete...."
