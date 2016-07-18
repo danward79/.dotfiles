@@ -37,6 +37,7 @@ fi
 #Symlink to new dotfiles.
 echo "Symlink to new files"
 ln -sfv "$DOTFILEPATH/.bash_profile" ~
+ln -sfv "$DOTFILEPATH/.mackup.cfg" ~
 
 # Check for Homebrew and install if not found
 if test ! $(which brew); then
@@ -58,4 +59,7 @@ if test ! $(brew list | grep "mackup"); then
   mackup restore
 fi
 
+# Finally reload the shell
 echo "Install complete...."
+echo "Reloading shell"
+exec $SHELL -l
