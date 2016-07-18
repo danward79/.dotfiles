@@ -38,6 +38,7 @@ fi
 echo "Symlink to new files"
 ln -sfv "$DOTFILEPATH/.bash_profile" ~
 ln -sfv "$DOTFILEPATH/.mackup.cfg" ~
+ln -sfv "$DOTFILEPATH/.mackup" ~
 
 # Check for Homebrew and install if not found
 if test ! $(which brew); then
