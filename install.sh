@@ -60,6 +60,10 @@ if test ! $(brew list | grep "mackup"); then
   mackup restore
 fi
 
+# Set mack preferences
+echo "Setting macos preferences"
+source "$DOTFILEPATH/.macos"
+
 # Finally reload the shell
 echo "Install complete...."
 echo "Reloading shell"
