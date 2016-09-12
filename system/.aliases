@@ -61,4 +61,7 @@ alias emptytrash="sudo rm -rfv /Volumes/*/.Trashes; sudo rm -rfv ~/.Trash; sudo 
 # Reload the shell (i.e. invoke as a login shell)
 alias reload="exec $SHELL -l"
 
+# Load Jupyter Notebook in appropriate folder
+alias jn="cd ~/Dropbox/Jupiter\ Notebooks/; jupyter notebook;"
+
 echo ".alias complete..."
